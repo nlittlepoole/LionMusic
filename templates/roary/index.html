@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>LionMusic</title>
+    </head>
+
+    <body>
+
+        <h1>LionMusic</h1>
+
+        <strong>{{ message }}</strong><br />
+        {% if uni %}
+            <ul>
+                {% for url in urls %}
+                <li>{{url.points}}<a href="article/?a={{url.url}}&t={{ url.title }}"><font size="4">  {{ url.title }}</font></a> </li><a href="?q={{url.url}}"><font color="red" size="1"> related </font></a> </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <form id="search" method="post" action="login">
+                {% csrf_token %}
+		        <br><input type="text"  name="uni" size="21" maxlength="10" placeholder="Uni">
+                <br><input type="password"  name="password" size="21" maxlength="120" placeholder="Password">
+                <br><input type="submit" value="Login" >
+		</form>
+        {% endif %}
+        <a href="/about/">About</a><br />
+    </body>
+
+</html>
