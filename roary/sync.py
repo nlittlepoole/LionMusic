@@ -50,6 +50,59 @@ def sound_cloud_sync(code):
             song['plays'] = int(tot_plays/tot_users)
             songs.append(song)
         return songs
+def spotify_link():
+    login = 'https://accounts.spotify.com/authorize?client_id=f5388af5ad814472bce04c92edc81e50&response_type=code&redirect_uri=http://localhost:8002/spotify&scope=user-library-read playlist-read-private'
+    return login
+def spotify_sync(access_token):
+    import requests
+
+    # oauth to get access token
+    payload = {'grant_type': "authorization_code", 'code': access_token, 'redirect_uri': 'http://localhost:8002/spotify', 'client_id':'f5388af5ad814472bce04c92edc81e50' ,'client_secret':'48e640b0c6544cfca29997d6b1a9e7a8'}
+    r = requests.post("https://accounts.spotify.com/api/token", data=payload)
+    token = r.json().get('access_token')
+
+    # deal with "your music"
+    api_request = "https://api.spotify.com/v1/me/tracks"
+    payload = {'Authorization': 'Bearer ' + token}
+    r = requests.get(api_request,headers=payload)
+    songs = []
+    for dic in r.json().get('items'): # spotify api calls are returned as json
+        track=dic.get('track')
+        song = {}
+        song['name'] = track.get('name','')
+        song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+        song['plays'] = track.get('popularity',1)
+        song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+        song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+        songs.append(song)
+    #get user id
+    api_request = "https://api.spotify.com/v1/me/"
+    r = requests.get(api_request,headers=payload)
+    uid= r.json().get('id')
+
+    #get list of playlists associated with user
+    api_request = "https://api.spotify.com/v1/users/" + uid + "/playlists"
+    print api_request
+    r = requests.get(api_request,headers=payload)
+    playlists = r.json()
+
+    #for each playlist, get all tracks and add to total list
+    for playlist in playlists.get('items'):
+        id = playlist.get('id')
+        api_request = "https://api.spotify.com/v1/users/" + uid + "/playlists/"+id+"/tracks"
+        r = requests.get(api_request,headers=payload)
+        for dic in r.json().get('items'):
+            track=dic.get('track')
+            song = {}
+            song['name'] = track.get('name','')
+            song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+            song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
+            song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+            song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+            songs.append(song)
+
+    return songs
+
 def google_music(gmail, psswd):
 
     from gmusicapi import Mobileclient

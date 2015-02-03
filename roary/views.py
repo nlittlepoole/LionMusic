@@ -3,6 +3,9 @@ from django.template import RequestContext
 from django.http import HttpResponse
 from django.http import HttpResponseBadRequest
 from django.shortcuts import redirect
+import requests
+import base64
+import simplejson as json
 # Create your views here.
 def home(request):
 
@@ -34,12 +37,11 @@ def login(request):
 def sound_cloud(request):
     """
     Redirect to Sound Cloud login
+    Handle soundcloud redirect
     """
-    import sync
 
     success = request.GET.get('success',None)
     # create client object with app credentials
-    import soundcloud
     import sync
     if not success:
         return redirect(sync.sound_cloud_link())
@@ -48,5 +50,19 @@ def sound_cloud(request):
         tracks = sync.sound_cloud_sync(code)
         for track in tracks:
             print track
-        return HttpResponse("OK")
+        return HttpResponse(str(tracks))
 
+def spotify(request):
+    """
+    Redirect to spotify login
+
+    handle spotify oath and sync
+    """
+
+    import sync
+    access_token = request.GET.get('code')
+    if access_token:
+        songs = sync.spotify_sync(access_token)
+        return HttpResponse(str(songs))
+    else:
+        return redirect(sync.spotify_link())
