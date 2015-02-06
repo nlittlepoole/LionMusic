@@ -113,6 +113,7 @@ def google_music(gmail, psswd):
         library = api.get_all_songs()
 
         for track in  library:
+            print track
             song = {}
             song['name'] = track.get('title','')
             song['artist'] = track.get('artist','')

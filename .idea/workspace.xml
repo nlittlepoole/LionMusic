@@ -26,7 +26,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="465">
+            <state line="16" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="sync.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="9" selection-start="5112" selection-end="5121" vertical-scroll-proportion="-8.384615" vertical-offset="1387" max-vertical-offset="2025">
+            <state line="115" column="23" selection-start="5307" selection-end="5307" vertical-scroll-proportion="-13.0" vertical-offset="1387" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -44,28 +44,21 @@
       <file leaf-file-name="oauth.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7" selection-start="7" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <folding />
+            <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modules.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10" selection-start="53" selection-end="53" vertical-scroll-proportion="0.11078287" vertical-offset="0" max-vertical-offset="677">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="10" selection-start="1894" selection-end="1900" vertical-scroll-proportion="-18.115385" vertical-offset="504" max-vertical-offset="1155">
+            <state line="19" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.437788" vertical-offset="0" max-vertical-offset="1155">
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1423251299000" expanded="true" signature="1813:1888" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
+                <marker date="1423264895000" expanded="true" signature="1812:1887" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
               </folding>
             </state>
           </provider>
@@ -116,13 +109,13 @@
         <option value="$PROJECT_DIR$/templates/roary/index.html" />
         <option value="$PROJECT_DIR$/roary/models.py" />
         <option value="$PROJECT_DIR$/roary/import.py" />
-        <option value="$PROJECT_DIR$/roary/sync.py" />
         <option value="$PROJECT_DIR$/roary/urls.py" />
         <option value="$PROJECT_DIR$/templates/roary/player.html" />
         <option value="$PROJECT_DIR$/static-assets/js/audioPlayer.js" />
         <option value="$PROJECT_DIR$/templates/roary/player2.html" />
         <option value="$PROJECT_DIR$/roary/oauth.py" />
         <option value="$PROJECT_DIR$/modules.txt" />
+        <option value="$PROJECT_DIR$/roary/sync.py" />
         <option value="$PROJECT_DIR$/roary/views.py" />
       </list>
     </option>
@@ -508,7 +501,7 @@
         <state line="58" column="32" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1095">
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1423251299000" expanded="true" signature="1813:1888" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
+            <marker date="1423264895000" expanded="true" signature="1812:1887" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
           </folding>
         </state>
       </provider>
@@ -539,7 +532,7 @@
         <state line="38" column="0" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="870">
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1423251299000" expanded="true" signature="1813:1888" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
+            <marker date="1423264895000" expanded="true" signature="1812:1887" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
           </folding>
         </state>
       </provider>
@@ -591,13 +584,6 @@
         <state line="9" column="28" selection-start="304" selection-end="304" vertical-scroll-proportion="0.17569546" vertical-offset="0" max-vertical-offset="683" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roary/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="41" selection-start="744" selection-end="744" vertical-scroll-proportion="0.515625" vertical-offset="0" max-vertical-offset="640">
@@ -619,30 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roary/oauth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roary/sync.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="9" selection-start="5112" selection-end="5121" vertical-scroll-proportion="-8.384615" vertical-offset="1387" max-vertical-offset="2025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roary/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="10" selection-start="1894" selection-end="1900" vertical-scroll-proportion="-18.115385" vertical-offset="504" max-vertical-offset="1155">
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1423251299000" expanded="true" signature="1813:1888" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
@@ -661,6 +623,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="10" selection-start="53" selection-end="53" vertical-scroll-proportion="0.11078287" vertical-offset="0" max-vertical-offset="677">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/oauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/sync.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="23" selection-start="5307" selection-end="5307" vertical-scroll-proportion="-13.0" vertical-offset="1387" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.437788" vertical-offset="0" max-vertical-offset="1155">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1423264895000" expanded="true" signature="1812:1887" placeholder="&quot;&quot;&quot;Redirect to spotify login...&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>

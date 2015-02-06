@@ -17,7 +17,7 @@ def player(request):
     dict_context = {'message': 'Login'}
     if request.session.get('uni'):
         dict_context['uni'] = request.session['uni']
-    return render(request, 'roary/player2.html', dict_context)
+    return render(request, 'roary/player.html', dict_context)
 
 def login(request):
     """
