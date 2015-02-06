@@ -14,6 +14,13 @@ def home(request):
     if request.session.get('uni'):
         dict_context['uni'] = request.session['uni']
     return render(request, 'roary/index.html', dict_context, context_instance = RequestContext(request))
+def player(request):
+
+
+    dict_context = {'message': 'Login'}
+    if request.session.get('uni'):
+        dict_context['uni'] = request.session['uni']
+    return render(request, 'roary/player2.html', dict_context)
 
 def login(request):
     """

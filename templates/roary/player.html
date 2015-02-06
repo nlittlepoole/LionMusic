@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>audioPlayer Demo</title>
+
+
+</head>
+<body>
+<audio id="audioPlayer" autoplay>
+  <source id="sourceMp3" src="/static/queue/song2.mp3" type="audio/mp3" />
+Your browser does not support the audio element.
+</audio>
+
+<script type="text/javascript">
+var nextAudio = "/static/queue/song3.mp3";
+var audioPlayer = document.getElementById('audioPlayer');
+
+audioPlayer.onended = function(){
+    audioPlayer.src = nextAudio;
+    var sourceMp3=document.getElementById('sourceMp3');
+
+    sourceMp3.src='/static/queue/song3.mp3';
+
+   player.load(); //just start buffering (preload)
+   player.play(); //start playing
+
+}
+</script>
+</body>
+</html>
