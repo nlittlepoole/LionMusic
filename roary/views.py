@@ -3,9 +3,6 @@ from django.template import RequestContext
 from django.http import HttpResponse
 from django.http import HttpResponseBadRequest
 from django.shortcuts import redirect
-import requests
-import base64
-import simplejson as json
 # Create your views here.
 def home(request):
 

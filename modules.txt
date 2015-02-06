@@ -1,0 +1,6 @@
+pxssh
+soundcloud
+django
+requests
+gmusicapi
+simplejson
