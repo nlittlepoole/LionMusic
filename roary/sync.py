@@ -57,7 +57,7 @@ def sound_cloud_sync(code, last_sync = 0):
 def spotify_link():
     login = 'https://accounts.spotify.com/authorize?client_id=f5388af5ad814472bce04c92edc81e50&response_type=code&redirect_uri=http://localhost:8002/spotify&scope=user-library-read playlist-read-private'
     return login
-def spotify_sync(access_token):
+def spotify_sync(access_token,last_sync=0):
     import requests
 
     # oauth to get access token
@@ -71,14 +71,17 @@ def spotify_sync(access_token):
     r = requests.get(api_request,headers=payload)
     songs = []
     for dic in r.json().get('items'): # spotify api calls are returned as json
-        track=dic.get('track')
-        song = {}
-        song['name'] = track.get('name','')
-        song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
-        song['plays'] = track.get('popularity',1)
-        song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
-        song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
-        songs.append(song)
+        stamp = dic.get("added_at")[:10]
+        stamp = time.mktime(datetime.datetime.strptime(stamp, "%Y-%m-%d" ).timetuple())
+        if stamp>last_sync:
+            track=dic.get('track')
+            song = {}
+            song['name'] = track.get('name','')
+            song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+            song['plays'] = track.get('popularity',1)
+            song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+            song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+            songs.append(song)
     #get user id
     api_request = "https://api.spotify.com/v1/me/"
     r = requests.get(api_request,headers=payload)
@@ -86,7 +89,6 @@ def spotify_sync(access_token):
 
     #get list of playlists associated with user
     api_request = "https://api.spotify.com/v1/users/" + uid + "/playlists"
-    print api_request
     r = requests.get(api_request,headers=payload)
     playlists = r.json()
 
@@ -96,15 +98,17 @@ def spotify_sync(access_token):
         api_request = "https://api.spotify.com/v1/users/" + uid + "/playlists/"+id+"/tracks"
         r = requests.get(api_request,headers=payload)
         for dic in r.json().get('items'):
-            track=dic.get('track')
-            song = {}
-            print track
-            song['name'] = track.get('name','')
-            song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
-            song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
-            song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
-            song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
-            songs.append(song)
+            stamp = dic.get("added_at")[:10]
+            stamp = time.mktime(datetime.datetime.strptime(stamp, "%Y-%m-%d" ).timetuple())
+            if stamp>last_sync:
+                track=dic.get('track')
+                song = {}
+                song['name'] = track.get('name','')
+                song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+                song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
+                song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+                song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+                songs.append(song)
 
     return songs
 
