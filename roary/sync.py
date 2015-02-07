@@ -1,6 +1,7 @@
 import soundcloud
 import datetime
 import time
+import simplejson as json
 def sound_cloud_link():
     client = soundcloud.Client(client_id='625ababca85331b09722e7b4ec160580',
                                    client_secret='e5a7c3e37c423e40191c12e6c5b46dc7',
@@ -52,7 +53,11 @@ def sound_cloud_sync(code, last_sync = 0):
                 tot_users = 3.0*tot_users if tot_users else tot_plays
 
                 song['plays'] = int(tot_plays/tot_users)
-                songs.append(song)
+                tup = youtubeVidSearch(song['name'],song['artist'])
+                song['url'] = tup[0]
+                song['art'] = tup[1]
+                if  song.get('url'):
+                    songs.append(song)
         return songs
 def spotify_link():
     login = 'https://accounts.spotify.com/authorize?client_id=f5388af5ad814472bce04c92edc81e50&response_type=code&redirect_uri=http://localhost:8002/spotify&scope=user-library-read playlist-read-private'
@@ -73,14 +78,17 @@ def spotify_sync(access_token,last_sync=0):
     for dic in r.json().get('items'): # spotify api calls are returned as json
         stamp = dic.get("added_at")[:10]
         stamp = time.mktime(datetime.datetime.strptime(stamp, "%Y-%m-%d" ).timetuple())
-        if stamp>last_sync:
-            track=dic.get('track')
-            song = {}
-            song['name'] = track.get('name','')
-            song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
-            song['plays'] = track.get('popularity',1)
-            song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
-            song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+        track=dic.get('track')
+        song = {}
+        song['name'] = track.get('name','')
+        song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+        song['plays'] = track.get('popularity',1)
+        song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+        song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+        tup = youtubeVidSearch(song['name'],song['artist'])
+        song['url'] = tup[0]
+        song['art'] = tup[1]
+        if stamp>last_sync  and song.get('url'):
             songs.append(song)
     #get user id
     api_request = "https://api.spotify.com/v1/me/"
@@ -100,14 +108,18 @@ def spotify_sync(access_token,last_sync=0):
         for dic in r.json().get('items'):
             stamp = dic.get("added_at")[:10]
             stamp = time.mktime(datetime.datetime.strptime(stamp, "%Y-%m-%d" ).timetuple())
-            if stamp>last_sync:
-                track=dic.get('track')
-                song = {}
-                song['name'] = track.get('name','')
-                song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
-                song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
-                song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
-                song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+
+            track=dic.get('track')
+            song = {}
+            song['name'] = track.get('name','')
+            song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
+            song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
+            song['genre'] = '' # spotify doesn't have an endpoint in their api for genre
+            song['year'] = 0 # spotify doesn't have an endpoint in their api for song year
+            tup = youtubeVidSearch(song['name'],song['artist'])
+            song['url'] = tup[0]
+            song['art'] = tup[1]
+            if stamp>last_sync and song.get('url'):
                 songs.append(song)
 
     return songs
@@ -128,12 +140,33 @@ def google_music(gmail, psswd,last_sync = 0):
             song['year'] = track.get('year',0)
             song['genre'] = track.get('genre','')
             song['plays'] = track.get('playCount',0)
+            tup = youtubeVidSearch(song['name'],song['artist'])
+            song['url'] = tup[0]
+            song['art'] = tup[1]
             stamp = int(track.get('creationTimestamp',0))/1000.0
-            if stamp > last_sync :
+            if stamp > last_sync and song.get('url') :
                 songs.append(song)
                 print track
 
     return songs
+def youtubeVidSearch(artist, songName):
+    import requests
+    baseurl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoCategoryId=10&key=AIzaSyBCXVXUOcD8eYWwijCmxdDhlf5qiRBOfdY&q='
+    query = artist + ' ' +songName
+    try:
+        queryUrl = baseurl + query
+        res = requests.get(queryUrl)
+        content = json.loads(res.content.decode('utf-8'))
+        videoUrl = 'https://www.youtube.com/watch?v='
+        videoUrl += content['items'][0]['id']['videoId']
+        #print(content)
+        artUrl = content['items'][0]['snippet']['thumbnails']['high']['url']
+        print(artUrl)
+        return [videoUrl, artUrl]
+    except Exception as e:
+        return [None,None]
+
+
 if __name__ == '__main__':
     gmail = raw_input('Gmail:\n')
     psswd = raw_input('Password:\n')
