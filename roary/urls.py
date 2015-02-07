@@ -7,4 +7,5 @@ urlpatterns = patterns('',
         url(r'soundcloud', views.sound_cloud, name='SoundCloud'),
         url(r'spotify', views.spotify, name='Spotify'),
         url(r'player', views.player, name='Player'),
+        url(r'logout', views.logout, name='Logout'),
         )

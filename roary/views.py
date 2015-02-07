@@ -18,6 +18,11 @@ def player(request):
     if request.session.get('uni'):
         dict_context['uni'] = request.session['uni']
     return render(request, 'roary/player.html', dict_context)
+def logout(request):
+
+    if request.session.get('uni'):
+        request.session['uni'] = None
+    return HttpResponse("OK") #
 
 def login(request):
     """
