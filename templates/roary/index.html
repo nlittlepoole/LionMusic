@@ -5,8 +5,10 @@
         <title>LionMusic</title>
         <link rel="stylesheet" href="./static/css/bootstrap.min.css">
         <style>
-            .wrap {margin: 40px;}
+            .wrap {margin-left: 150px;
+                   margin-right: 150px;}
             input {margin-top: 5px;}
+            p {font-size: 22px;}
         </style>
     </head>
 
@@ -29,12 +31,16 @@
         <div class="wrap">
             <h1>LionMusic</h1>
             {% if uni %}
-            <strong>{{ message }}</strong><br />
-                <ul>
-                    {% for url in urls %}
-                    <li>{{url.points}}<a href="article/?a={{url.url}}&t={{ url.title }}"><font size="4">  {{ url.title }}</font></a> </li><a href="?q={{url.url}}"><font color="red" size="1"> related </font></a> </li>
-                    {% endfor %}
-                </ul>
+            <p>
+                Click on any of the buttons below to add your music. It's all anonymous, and you can add your library again when you have new songs.
+            </p>
+            <br><br>
+            <center><p>
+                <a href="itunes"><button type="button" class="btn btn-default">iTunes</button></a>
+                <a href="google"><button type="button" class="btn btn-primary">Google Play</button></a>
+                <a href="spotify"><button type="button" class="btn btn-success">Spotify</button></a>
+                <a href="soundcloud"><button type="button" class="btn btn-danger">SoundCloud</button></a>
+            </p></center>
             {% else %}
             <form class="form-signin col-sm-2" id="search" method="post" action="login">
                 {% csrf_token %}
