@@ -3,28 +3,49 @@
 
     <head>
         <title>LionMusic</title>
+        <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+        <style>
+            .wrap {margin: 40px;}
+            input {margin-top: 5px;}
+        </style>
     </head>
 
     <body>
+        <nav class="navbar navbar-default navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">LionMusic</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Login</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
 
-        <h1>LionMusic</h1>
-
-        <strong>{{ message }}</strong><br />
-        {% if uni %}
-            <ul>
-                {% for url in urls %}
-                <li>{{url.points}}<a href="article/?a={{url.url}}&t={{ url.title }}"><font size="4">  {{ url.title }}</font></a> </li><a href="?q={{url.url}}"><font color="red" size="1"> related </font></a> </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <form id="search" method="post" action="login">
+        <div class="wrap">
+            <h1>LionMusic</h1>
+            {% if uni %}
+            <strong>{{ message }}</strong><br />
+                <ul>
+                    {% for url in urls %}
+                    <li>{{url.points}}<a href="article/?a={{url.url}}&t={{ url.title }}"><font size="4">  {{ url.title }}</font></a> </li><a href="?q={{url.url}}"><font color="red" size="1"> related </font></a> </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+            <form class="form-signin col-sm-2" id="search" method="post" action="login">
                 {% csrf_token %}
-		        <br><input type="text"  name="uni" size="21" maxlength="10" placeholder="Uni">
-                <br><input type="password"  name="password" size="21" maxlength="120" placeholder="Password">
-                <br><input type="submit" value="Login" >
-		</form>
-        {% endif %}
-        <a href="/about/">About</a><br />
+                <label for="inputEmail" class="sr-only">UNI</label>
+                <br><input type="text" class="form-control" placeholder="UNI" maxlength="10" class="col-sm-10" name="uni" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" maxlength="120" size="21px" required>
+                <br><button class="btn btn-default" type="submit">Sign in</button>
+            </form>
+            {% endif %}
+        </div>
     </body>
 
 </html>
