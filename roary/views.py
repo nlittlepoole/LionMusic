@@ -18,8 +18,8 @@ def home(request):
     return render(request, 'roary/index.html', dict_context, context_instance = RequestContext(request))
 def player(request):
 
-
-    dict_context = {'message': 'Login',}
+    song = track()
+    dict_context = {'message': 'Login','track':song}
     if request.session.get('uni'):
         dict_context['uni'] = request.session['uni']
     return render(request, 'roary/player2.html', dict_context)
@@ -76,6 +76,7 @@ def sound_cloud(request):
                 a.duration= 0
                 a.plays= song.get('plays',0) if not exists else a.plays+song['plays']
                 a.users = 0 if not exists else a.users+1
+                a.art = song.get('art') if song.get('art') else a.art
                 a.save()
             x.soundcloud_music_time = str(time.time())
         return HttpResponse("ok")
@@ -110,12 +111,16 @@ def spotify(request):
     else:
         return redirect(sync.spotify_link())
 def top_40(request):
+    import simplejson as json
+    song = track()
+    return HttpResponse(json.dumps(song))
+def track():
     from roary.models import Song,Queue
     from django.db import models
     from django.db.models import Avg
     import math
     import random
-    import simplejson as json
+
 
     tup = Song.objects.aggregate(average_plays=Avg('plays'),average_users=Avg('users'))
     avg_plays = tup.get('average_plays',0)
@@ -144,5 +149,5 @@ def top_40(request):
     song['genre'] = track.genre
     song['year'] =track.year
     song['url'] = track.url.split('v=')[1]
-    song['art'] = track.art
-    return HttpResponse(json.dumps(song))
+    song['art'] = track.art if track.art and track.art!='' else "https://c1.staticflickr.com/9/8206/8187575707_45abf81e2e_h.jpg"
+    return song

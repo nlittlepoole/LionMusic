@@ -9,6 +9,9 @@
 
 </head>
 <body>
+<body background="/static/butler.jpg">
+<br><br><br>
+<img src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black;box-shadow:3px 3px 1px">
 <div id="audioWrapper"></div>
 <div style="position:relative;width:267px;height:0px;overflow:hidden;">
   <div id="player" style="position:absolute;top:-276px;left:-5px">
@@ -18,7 +21,7 @@
 <script src="http://www.youtube.com/player_api"></script>
 
 <script>
-var url = "Lcyy-6o3PwA"
+var url = "{{track.url}}"
      function onYouTubePlayerAPIReady() {
 
             var player;
@@ -43,7 +46,7 @@ var url = "Lcyy-6o3PwA"
                 if (event.data == YT.PlayerState.ENDED){
                     $.getJSON("http://localhost:8002/top_40", function(data) {
                         console.log(data.url);
-                        $("iframe").attr("src","https://www.youtube.com/watch?v=ey22gpY7KUE");
+                        player.loadVideoById(data.url);
                         //$("iframe").attr("src","http://youtube.com/watch?v=" + data.url);
 
                   });
