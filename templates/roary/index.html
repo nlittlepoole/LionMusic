@@ -10,7 +10,7 @@
         <h1>LionMusic</h1>
 
         <strong>{{ message }}</strong><br />
-        {% if uni %}
+        {% if unis %}
             <ul>
                 {% for url in urls %}
                 <li>{{url.points}}<a href="article/?a={{url.url}}&t={{ url.title }}"><font size="4">  {{ url.title }}</font></a> </li><a href="?q={{url.url}}"><font color="red" size="1"> related </font></a> </li>

@@ -1,5 +1,6 @@
 import soundcloud
-
+import datetime
+import time
 def sound_cloud_link():
     client = soundcloud.Client(client_id='625ababca85331b09722e7b4ec160580',
                                    client_secret='e5a7c3e37c423e40191c12e6c5b46dc7',
@@ -7,7 +8,7 @@ def sound_cloud_link():
 
     # redirect user to authorize URL
     return client.authorize_url()
-def sound_cloud_sync(code):
+def sound_cloud_sync(code, last_sync = 0):
         client = soundcloud.Client(client_id='625ababca85331b09722e7b4ec160580',
                                    client_secret='e5a7c3e37c423e40191c12e6c5b46dc7',
                                    redirect_uri='http://127.0.0.1:8002/soundcloud/?success=true')
@@ -26,29 +27,32 @@ def sound_cloud_sync(code):
         songs = []
         for track in tracks:
             #two formats of tacks, so ternary operator depending on if its a dict or an object
-            song = {}
-            song['name'] = track.get('title') if type(track) == dict else track.title
-            song['artist'] = '' #Soundcloud puts artist data in the name of the track
+            stamp =  track.get('created_at') if type(track) == dict else track.created_at
+            stamp = time.mktime(datetime.datetime.strptime(stamp[:-6].strip(), "%Y/%m/%d %H:%M:%S").timetuple())
+            if stamp> last_sync:
+                song = {}
+                song['name'] = track.get('title') if type(track) == dict else track.title
+                song['artist'] = '' #Soundcloud puts artist data in the name of the track
 
-            if len(song['name'].split('-')) >1:
-                song['artist'] = song['name'].split('-')[0]
-                song['name'] = song['name'].split('-')[1]
+                if len(song['name'].split('-')) >1:
+                    song['artist'] = song['name'].split('-')[0]
+                    song['name'] = song['name'].split('-')[1]
 
-            song['year'] = track.get('release_year',0) if type(track) == dict else track.release_year
-            song['year'] = song['year'] if song['year'] != None else 0
+                song['year'] = track.get('release_year',0) if type(track) == dict else track.release_year
+                song['year'] = song['year'] if song['year'] != None else 0
 
-            song['genre'] = track.get('genre','') if type(track) == dict else track.genre
-            song['genre'] = song['genre'] if song['genre'] != None else ''
+                song['genre'] = track.get('genre','') if type(track) == dict else track.genre
+                song['genre'] = song['genre'] if song['genre'] != None else ''
 
-            # SoundCloud depreciated plays per user api call, so have to estimate based on total play count
-            tot_plays = track.get('playback_count',1) if type(track) == dict else track.playback_count
-            tot_plays = 2.0*tot_plays if tot_plays else 1
+                # SoundCloud depreciated plays per user api call, so have to estimate based on total play count
+                tot_plays = track.get('playback_count',1) if type(track) == dict else track.playback_count
+                tot_plays = 2.0*tot_plays if tot_plays else 1
 
-            tot_users = track.get('favoritings_count',1) if type(track) == dict else track.favoritings_count
-            tot_users = 3.0*tot_users if tot_users else tot_plays
+                tot_users = track.get('favoritings_count',1) if type(track) == dict else track.favoritings_count
+                tot_users = 3.0*tot_users if tot_users else tot_plays
 
-            song['plays'] = int(tot_plays/tot_users)
-            songs.append(song)
+                song['plays'] = int(tot_plays/tot_users)
+                songs.append(song)
         return songs
 def spotify_link():
     login = 'https://accounts.spotify.com/authorize?client_id=f5388af5ad814472bce04c92edc81e50&response_type=code&redirect_uri=http://localhost:8002/spotify&scope=user-library-read playlist-read-private'
@@ -94,6 +98,7 @@ def spotify_sync(access_token):
         for dic in r.json().get('items'):
             track=dic.get('track')
             song = {}
+            print track
             song['name'] = track.get('name','')
             song['artist'] = ' '.join([x['name'] for x in track.get('artists',[])])
             song['plays'] = track.get('popularity',1) # imputing playcount to popularity rating [0,100]
@@ -103,24 +108,26 @@ def spotify_sync(access_token):
 
     return songs
 
-def google_music(gmail, psswd):
+def google_music(gmail, psswd,last_sync = 0):
 
     from gmusicapi import Mobileclient
     api = Mobileclient()
     songs =[]
 
-    if api.login(gmail, psswd):
+    if api.login(gmail, psswd, ):
         library = api.get_all_songs()
 
         for track in  library:
-            print track
             song = {}
             song['name'] = track.get('title','')
             song['artist'] = track.get('artist','')
             song['year'] = track.get('year',0)
             song['genre'] = track.get('genre','')
             song['plays'] = track.get('playCount',0)
-            songs.append(song)
+            stamp = int(track.get('creationTimestamp',0))/1000.0
+            if stamp > last_sync :
+                songs.append(song)
+                print track
 
     return songs
 if __name__ == '__main__':

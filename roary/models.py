@@ -6,6 +6,7 @@ class User(models.Model):
     uni = models.CharField(max_length=10,primary_key=True)
     department = models.CharField(max_length=120)
     dorm = models.CharField(max_length=120)
+    #google_music_time =
 
     def __str__(self):
         return self.uni

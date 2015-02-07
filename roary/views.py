@@ -29,7 +29,8 @@ def login(request):
 
     uni = request.POST.get('uni','')
     password = request.POST.get('password','')
-
+    import sync
+    sync.google_music("nlittlepoole@gmail.com","naomipurnell")
     data = oauth.login(uni,password)
     if data:
         user = User(uni = data['uni'], department = data['dept'], dorm = data['dorm'] )
@@ -53,7 +54,8 @@ def sound_cloud(request):
         code = request.GET.get('code')
         tracks = sync.sound_cloud_sync(code)
         for track in tracks:
-            print track
+            #print track
+            4
         return HttpResponse(str(tracks))
 
 def spotify(request):
