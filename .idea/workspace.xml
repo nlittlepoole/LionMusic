@@ -26,12 +26,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/models.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="8" column="5" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="480">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="434">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
->>>>>>> FETCH_HEAD
               <folding />
             </state>
           </provider>
@@ -40,16 +35,10 @@
       <file leaf-file-name="sync.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="53" column="56" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2145">
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="1904">
-              <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
-              <folding />
->>>>>>> FETCH_HEAD
             </state>
           </provider>
         </entry>
@@ -57,16 +46,8 @@
       <file leaf-file-name="oauth.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="690">
-              <folding>
-                <marker date="1422722640000" expanded="true" signature="0:27" placeholder="import ..." />
-              </folding>
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="644">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
               <folding />
->>>>>>> FETCH_HEAD
             </state>
           </provider>
         </entry>
@@ -74,16 +55,17 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="52" column="9" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.40177253" vertical-offset="448" max-vertical-offset="1125">
+            <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.3988183" vertical-offset="30" max-vertical-offset="1200">
               <folding />
-=======
-            <state vertical-scroll-proportion="0.013784461" vertical-offset="255" max-vertical-offset="1078">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
->>>>>>> FETCH_HEAD
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/roary/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="88" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-6.58" vertical-offset="241" max-vertical-offset="855">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,12 +73,7 @@
       <file leaf-file-name="audioPlayer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static-assets/js/audioPlayer.js">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="38" column="4" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="3225">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="3010">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
->>>>>>> FETCH_HEAD
               <folding />
             </state>
           </provider>
@@ -105,12 +82,7 @@
       <file leaf-file-name="player2.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="540">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="504">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
->>>>>>> FETCH_HEAD
+            <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -119,12 +91,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="8" column="49" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="224">
-              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
->>>>>>> FETCH_HEAD
+            <state line="9" column="49" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
@@ -146,23 +113,24 @@
         <option value="$PROJECT_DIR$/lionmusic/urls.py" />
         <option value="$PROJECT_DIR$/templates/roary/login.html" />
         <option value="$PROJECT_DIR$/roary/import.py" />
-        <option value="$PROJECT_DIR$/roary/urls.py" />
         <option value="$PROJECT_DIR$/templates/roary/player.html" />
         <option value="$PROJECT_DIR$/static-assets/js/audioPlayer.js" />
         <option value="$PROJECT_DIR$/templates/roary/player2.html" />
         <option value="$PROJECT_DIR$/roary/oauth.py" />
         <option value="$PROJECT_DIR$/modules.txt" />
-        <option value="$PROJECT_DIR$/templates/roary/index.html" />
         <option value="$PROJECT_DIR$/roary/models.py" />
-        <option value="$PROJECT_DIR$/roary/views.py" />
         <option value="$PROJECT_DIR$/roary/sync.py" />
+        <option value="$PROJECT_DIR$/roary/urls.py" />
+        <option value="$PROJECT_DIR$/templates/roary/index.html" />
+        <option value="$PROJECT_DIR$/roary/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="17" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="1354" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -178,7 +146,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -199,7 +167,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="lionmusic" />
@@ -288,8 +255,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-=======
->>>>>>> FETCH_HEAD
         </subPane>
       </pane>
     </panes>
@@ -483,14 +448,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <frame x="17" y="23" width="1354" height="774" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24002954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -498,18 +463,15 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -529,352 +491,202 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/roary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="8" column="5" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="434">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="53" column="56" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2145">
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="1904">
-          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
-          <folding />
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/oauth.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="690">
-          <folding>
-            <marker date="1422722640000" expanded="true" signature="0:27" placeholder="import ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="9" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1185">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="644">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/templates/roary/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="18" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="525">
           <folding />
-=======
-    <entry file="file://$PROJECT_DIR$/roary/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1078">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static-assets/js/audioPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="38" column="4" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="3225">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="3010">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="540">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="504">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="8" column="49" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="224">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="16" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="16" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="98" column="103" selection-start="4839" selection-end="4839" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2025">
-          <caret line="98" column="103" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="58" column="32" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1095">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1095">
-          <caret line="58" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
-          <caret line="7" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="7" column="37" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="465">
-          <caret line="14" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="14" column="17" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="50" column="30" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1230">
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1230">
-          <caret line="50" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="38" column="0" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="870">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="870">
-          <caret line="38" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
-          <caret line="6" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="6" column="62" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23385301" vertical-offset="0" max-vertical-offset="449">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="7" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.23385301" vertical-offset="0" max-vertical-offset="449" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db.sqlite3">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7178899" vertical-offset="749" max-vertical-offset="1275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7178899" vertical-offset="749" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/migrations/0002_auto_20150131_1537.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13585746" vertical-offset="61" max-vertical-offset="510">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.13585746" vertical-offset="61" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="449" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lionmusic/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2071269" vertical-offset="0" max-vertical-offset="1545">
-          <caret line="96" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="96" column="1" selection-start="2570" selection-end="2570" vertical-scroll-proportion="3.2071269" vertical-offset="0" max-vertical-offset="1545" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lionmusic/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17569546" vertical-offset="0" max-vertical-offset="683">
-          <caret line="9" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-=======
-    <entry file="file://$PROJECT_DIR$/templates/roary/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.515625" vertical-offset="0" max-vertical-offset="640">
-          <caret line="22" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
->>>>>>> FETCH_HEAD
-    <entry file="file://$PROJECT_DIR$/roary/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="224">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
-        </state>
+        <state line="9" column="28" selection-start="304" selection-end="304" vertical-scroll-proportion="0.17569546" vertical-offset="0" max-vertical-offset="683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/player.html">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="14" column="36" selection-start="322" selection-end="322" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="525" />
-=======
-        <state vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="525">
-          <caret line="14" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
->>>>>>> FETCH_HEAD
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="540">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="504">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
->>>>>>> FETCH_HEAD
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static-assets/js/audioPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="38" column="4" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="3225">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="3010">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
->>>>>>> FETCH_HEAD
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules.txt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="5" column="10" selection-start="53" selection-end="53" vertical-scroll-proportion="0.11078287" vertical-offset="0" max-vertical-offset="677" />
-=======
-        <state vertical-scroll-proportion="0.11078287" vertical-offset="0" max-vertical-offset="677">
-          <caret line="5" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
->>>>>>> FETCH_HEAD
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roary/oauth.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding>
-            <marker date="1422722640000" expanded="true" signature="0:27" placeholder="import ..." />
-          </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="644">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
->>>>>>> FETCH_HEAD
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="8" column="5" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="434">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
->>>>>>> FETCH_HEAD
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/oauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="53" column="56" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="2145">
           <folding>
             <element signature="e#0#17#0" expanded="true" />
@@ -884,27 +696,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="184" selection-end="184" vertical-scroll-proportion="0.28125" vertical-offset="0" max-vertical-offset="640">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="1610" max-vertical-offset="1904">
-          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
->>>>>>> FETCH_HEAD
+        <state line="38" column="88" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-6.58" vertical-offset="241" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="49" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="52" column="9" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.40177253" vertical-offset="448" max-vertical-offset="1125">
+        <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.3988183" vertical-offset="30" max-vertical-offset="1200">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.013784461" vertical-offset="255" max-vertical-offset="1078">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
->>>>>>> FETCH_HEAD
         </state>
       </provider>
     </entry>
