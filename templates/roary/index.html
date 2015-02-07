@@ -9,6 +9,7 @@
                    margin-right: 150px;}
             input {margin-top: 5px;}
             p {font-size: 22px;}
+            .horiz-center {margin-left:auto; margin-right:auto;}
         </style>
     </head>
 
@@ -45,13 +46,16 @@
                 {% if fail %}
                 <br><font color="red">Login Attempt failed</font>
                 {% endif %}
-            <form class="form-signin col-sm-2" id="search" method="post" action="login">
+            <form class="form-signin center-block" id="search" method="post" action="login" style="width:15%;">
                 {% csrf_token %}
+                <center>
                 <label for="inputEmail" class="sr-only">UNI</label>
+                <object type="image/svg+xml" width="120px" data="./static/roary.svg" style="opacity:0.3; -webkit-filter: grayscale(100%); filter: grayscale(100%);"></object>
                 <br><input type="text" class="form-control" placeholder="UNI" maxlength="100" class="col-sm-10" name="uni" required autofocus>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" name="password" class="form-control" placeholder="Password" maxlength="120" size="21px" required>
-                <br><button class="btn btn-default" type="submit">Sign in</button>
+                <br><button class="btn btn-default col-sm-12" type="submit">Sign in</button>
+                </center>
             </form>
             {% endif %}
         </div>
