@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roary/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="480">
+            <state line="13" column="23" selection-start="401" selection-end="401" vertical-scroll-proportion="0.28803545" vertical-offset="0" max-vertical-offset="677">
               <folding />
             </state>
           </provider>
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.3988183" vertical-offset="30" max-vertical-offset="1200">
+            <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -118,11 +118,11 @@
         <option value="$PROJECT_DIR$/templates/roary/player2.html" />
         <option value="$PROJECT_DIR$/roary/oauth.py" />
         <option value="$PROJECT_DIR$/modules.txt" />
-        <option value="$PROJECT_DIR$/roary/models.py" />
         <option value="$PROJECT_DIR$/roary/sync.py" />
         <option value="$PROJECT_DIR$/roary/urls.py" />
         <option value="$PROJECT_DIR$/templates/roary/index.html" />
         <option value="$PROJECT_DIR$/roary/views.py" />
+        <option value="$PROJECT_DIR$/roary/models.py" />
       </list>
     </option>
   </component>
@@ -664,13 +664,6 @@
         <state line="5" column="10" selection-start="53" selection-end="53" vertical-scroll-proportion="0.11078287" vertical-offset="0" max-vertical-offset="677" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roary/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/roary/player2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="4" selection-start="559" selection-end="592" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
@@ -710,7 +703,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/roary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.3988183" vertical-offset="30" max-vertical-offset="1200">
+        <state line="24" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roary/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="23" selection-start="401" selection-end="401" vertical-scroll-proportion="0.28803545" vertical-offset="0" max-vertical-offset="677">
           <folding />
         </state>
       </provider>
