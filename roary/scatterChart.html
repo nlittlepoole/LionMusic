@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./bower_components/nvd3/src/nv.d3.css" rel="stylesheet" />
+        <script src="./bower_components/d3/d3.min.js"></script>
+        <script src="./bower_components/nvd3/nv.d3.min.js"></script>
+    </head>
+    <body>
+        
+    <div id="scatterchart"><svg style="height:350px;"></svg></div>
+
+
+    <script>
+
+
+
+            data_scatterchart=[{"values": [{"y": 0, "x": -9, "shape": "circle", "size": "1"}, {"y": 5, "x": -5, "shape": "circle", "size": "1"}, {"y": 14, "x": -2, "shape": "circle", "size": "1"}, {"y": 9, "x": -7, "shape": "circle", "size": "1"}, {"y": 24, "x": -3, "shape": "circle", "size": "1"}, {"y": 50, "x": -5, "shape": "circle", "size": "1"}, {"y": 42, "x": 1, "shape": "circle", "size": "1"}, {"y": 35, "x": 6, "shape": "circle", "size": "1"}, {"y": 72, "x": -2, "shape": "circle", "size": "1"}, {"y": 72, "x": 7, "shape": "circle", "size": "1"}, {"y": 10, "x": 9, "shape": "circle", "size": "1"}, {"y": 88, "x": 5, "shape": "circle", "size": "1"}, {"y": 24, "x": 3, "shape": "circle", "size": "1"}, {"y": 13, "x": 10, "shape": "circle", "size": "1"}, {"y": 14, "x": 7, "shape": "circle", "size": "1"}, {"y": 15, "x": 5, "shape": "circle", "size": "1"}, {"y": 32, "x": 10, "shape": "circle", "size": "1"}, {"y": 51, "x": 9, "shape": "circle", "size": "1"}, {"y": 72, "x": 15, "shape": "circle", "size": "1"}, {"y": 38, "x": 12, "shape": "circle", "size": "1"}, {"y": 20, "x": 10, "shape": "circle", "size": "1"}, {"y": 105, "x": 11, "shape": "circle", "size": "1"}, {"y": 22, "x": 16, "shape": "circle", "size": "1"}, {"y": 230, "x": 15, "shape": "circle", "size": "1"}, {"y": 240, "x": 17, "shape": "circle", "size": "1"}, {"y": 200, "x": 20, "shape": "circle", "size": "1"}, {"y": 52, "x": 20, "shape": "circle", "size": "1"}, {"y": 135, "x": 19, "shape": "circle", "size": "1"}, {"y": 56, "x": 24, "shape": "circle", "size": "1"}, {"y": 290, "x": 23, "shape": "circle", "size": "1"}, {"y": 120, "x": 20, "shape": "circle", "size": "1"}, {"y": 217, "x": 24, "shape": "circle", "size": "1"}, {"y": 32, "x": 31, "shape": "circle", "size": "1"}, {"y": 264, "x": 24, "shape": "circle", "size": "1"}, {"y": 170, "x": 32, "shape": "circle", "size": "1"}, {"y": 35, "x": 31, "shape": "circle", "size": "1"}, {"y": 72, "x": 30, "shape": "circle", "size": "1"}, {"y": 259, "x": 35, "shape": "circle", "size": "1"}, {"y": 342, "x": 33, "shape": "circle", "size": "1"}, {"y": 234, "x": 38, "shape": "circle", "size": "1"}, {"y": 80, "x": 31, "shape": "circle", "size": "1"}, {"y": 328, "x": 32, "shape": "circle", "size": "1"}, {"y": 84, "x": 41, "shape": "circle", "size": "1"}, {"y": 86, "x": 42, "shape": "circle", "size": "1"}, {"y": 264, "x": 41, "shape": "circle", "size": "1"}, {"y": 225, "x": 38, "shape": "circle", "size": "1"}, {"y": 276, "x": 39, "shape": "circle", "size": "1"}, {"y": 329, "x": 40, "shape": "circle", "size": "1"}, {"y": 96, "x": 43, "shape": "circle", "size": "1"}, {"y": 392, "x": 39, "shape": "circle", "size": "1"}], "key": "songs", "yAxis": "1"}];
+
+
+        nv.addGraph(function() {
+        var chart = nv.models.scatterChart();
+
+        chart.margin({top: 30, right: 60, bottom: 20, left: 60});
+
+        var datum = data_scatterchart;
+
+
+
+                chart.xAxis
+                .tickFormat(d3.format(',.02f'));
+            chart.yAxis
+                .tickFormat(d3.format(',.02f'));
+
+
+
+          chart.showLegend(true);
+
+
+    
+
+        
+
+
+
+
+    chart.scatter.onlyCircles(false);
+
+    chart
+        .showDistX(true)
+        .showDistY(true)
+        .color(d3.scale.category10().range());
+
+            d3.select('#scatterchart svg')
+            .datum(datum)
+            .transition().duration(500)
+            .attr('height', 350)
+            .call(chart);
+
+
+        });
+
+
+
+    </script>
+
+    </body>
+</html>

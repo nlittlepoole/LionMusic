@@ -1,3 +1,4 @@
+python-nvd3
 pxssh
 soundcloud
 django
