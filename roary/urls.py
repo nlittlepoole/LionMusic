@@ -8,4 +8,5 @@ urlpatterns = patterns('',
         url(r'spotify', views.spotify, name='Spotify'),
         url(r'player', views.player, name='Player'),
         url(r'logout', views.logout, name='Logout'),
+        url(r'top_40', views.top_40, name='Top40'),
         )
