@@ -14,6 +14,7 @@ def youtubeVidSearch(artist, songName):
     artUrl = content['items'][0]['snippet']['thumbnails']['high']['url']
     print(artUrl)
     return [videoUrl, artUrl]
+<<<<<<< HEAD
 
 def titleCleaner(title):
     remix = False
@@ -33,3 +34,7 @@ def titleCleaner(title):
     return title
 
 #t = titleCleaner('Forever is Ours (feat. Emma Hewitt) [Remix]')
+=======
+if __name__ == '__main__':
+    y = youtubeVidSearch('Bruno Mars', 'Uptown Funk')
+>>>>>>> Databases
