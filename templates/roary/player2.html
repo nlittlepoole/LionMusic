@@ -33,7 +33,7 @@
          </nav>
 <br>
 <div style="margin-left: 50px;">
-<img src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black;box-shadow:3px 3px 1px">
+<img id="art" src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black;box-shadow:3px 3px 1px">
 <font color="white">
  <h2 id="song">{{track.name}}</h2>
  <h4 id="artist">{{track.artist}} </h4>
@@ -80,6 +80,8 @@ var url = "{{track.url}}"
                         player.loadVideoById(data.url);
                         document.getElementById("song").innerHTML = data.name;
                         document.getElementById("artist").innerHTML = data.artist
+                        document.getElementById("artist").innerHTML = data.artist
+                        document.getElementById("art").src= data.art
                         //$("iframe").attr("src","http://youtube.com/watch?v=" + data.url);
 
                   });
