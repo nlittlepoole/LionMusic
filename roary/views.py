@@ -3,13 +3,13 @@ from django.template import RequestContext
 from django.http import HttpResponse
 from django.http import HttpResponseBadRequest
 from django.shortcuts import redirect
+import time
 # Create your views here.
 def home(request):
 
     from roary.models import Song,Queue
     from django.db import models
     from django.db.models import Avg
-    import time
     import math
     import random
     #while 1:
@@ -66,7 +66,7 @@ def login(request):
     uni = request.POST.get('uni','')
     password = request.POST.get('password','')
     import sync
-    sync.google_music("nlittlepoole@gmail.com","naomipurnell")
+    #sync.google_music("nlittlepoole@gmail.com","naomipurnell")
     data = oauth.login(uni,password)
     if data:
         user = User(uni = data['uni'], department = data['dept'], dorm = data['dorm'] )
@@ -84,15 +84,27 @@ def sound_cloud(request):
     success = request.GET.get('success',None)
     # create client object with app credentials
     import sync
+    from roary.models import Song,User
     if not success:
         return redirect(sync.sound_cloud_link())
     else:
         code = request.GET.get('code')
-        tracks = sync.sound_cloud_sync(code)
-        for track in tracks:
-            #print track
-            4
-        return HttpResponse(str(tracks))
+        uni = request.session.get('uni')
+        logged_in = sum(1 for result in User.objects.filter(uni=uni)) > 0
+        if logged_in:
+            x = User.objects.filter(uni=uni)[0]
+            stamp = x.soundcloud_music_time if x.soundcloud_music_time and x.soundcloud_music_time != '' else 0
+            tracks = sync.sound_cloud_sync(code,float(stamp))
+            for song in tracks:
+                exists = sum(1 for result in Song.objects.filter(url=song['url'])) > 0
+
+                a= Song(name=song['name'],url=song['url'],year=song['year'],genre=song['genre'],artist=song['artist']) if not exists else Song.objects.filter(url=song['url'])[0]
+                a.duration= 0
+                a.plays= song.get('plays',0) if not exists else a.plays+song['plays']
+                a.users = 0 if not exists else a.users+1
+                a.save()
+            x.soundcloud_music_time = str(time.time())
+        return HttpResponse("ok")
 
 def spotify(request):
     """
@@ -102,9 +114,24 @@ def spotify(request):
     """
 
     import sync
+    from roary.models import Song,User
     access_token = request.GET.get('code')
-    if access_token:
-        songs = sync.spotify_sync(access_token)
-        return HttpResponse(str(songs))
+    uni = request.session.get('uni')
+    if access_token and uni:
+        logged_in = sum(1 for result in User.objects.filter(uni=uni)) > 0
+        if logged_in:
+            x = User.objects.filter(uni=uni)[0]
+            stamp = x.spotify_music_time if x.spotify_music_time and x.spotify_music_time != '' else 0
+            songs = sync.spotify_sync(access_token,float(stamp))
+            for song in songs:
+                exists = sum(1 for result in Song.objects.filter(url=song['url'])) > 0
+
+                a= Song(name=song['name'],url=song['url'],year=song['year'],genre=song['genre'],artist=song['artist']) if not exists else Song.objects.filter(url=song['url'])[0]
+                a.duration= 0
+                a.plays= song.get('plays',0) if not exists else a.plays+song['plays']
+                a.users = 0 if not exists else a.users+1
+                a.save()
+            x.spotify_music_time = str(time.time())
+        return HttpResponse("OK")
     else:
         return redirect(sync.spotify_link())

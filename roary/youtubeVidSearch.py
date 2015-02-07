@@ -14,5 +14,5 @@ def youtubeVidSearch(artist, songName):
     artUrl = content['items'][0]['snippet']['thumbnails']['high']['url']
     print(artUrl)
     return [videoUrl, artUrl]
-
-y = youtubeVidSearch('Bruno Mars', 'Uptown Funk')
+if __name__ == '__main__':
+    y = youtubeVidSearch('Bruno Mars', 'Uptown Funk')
