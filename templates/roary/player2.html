@@ -20,11 +20,14 @@
                     <ul class="nav navbar-nav">
                         <li ><a href="/index">Sync</a></li>
                         <li class="active"><a href="#">Radio</a></li>
-                        <li><a href="/logout">Logout</a></li>
-                        <li><select onchange="location = this.options[this.selectedIndex].value;">
+                        <li><select class="form-control" onchange="location = this.options[this.selectedIndex].value;" style="margin-top:8px; margin-left:20px;">
                               <option value="/player">Columbia Top 40</option>
                               <option value="/player?station=underground">Columbia Underground</option>
                             </select>
+                          </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="/logout">Logout</a></li>
                         </li>
                     </ul>
                 </div>
@@ -32,8 +35,8 @@
             </div>
          </nav>
 <br>
-<div style="margin-left: 50px;">
-<img src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black;box-shadow:3px 3px 1px">
+<div style="margin-left: 50px; background-color: rgba(0, 0, 0, 0.6); padding: 20px; width: auto; width: 600px; border-radius: 15px;">
+<img src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black; opacity:1; border-radius:5px;">
 <font color="white">
  <h2 id="song">{{track.name}}</h2>
  <h4 id="artist">{{track.artist}} </h4>
