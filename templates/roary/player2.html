@@ -6,12 +6,38 @@
 <title>audioPlayer Demo</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/static/js/audioPlayer.js"></script>
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
 
 </head>
 <body>
 <body background="/static/butler.jpg">
-<br><br><br>
+        <nav class="navbar navbar-default navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Lion DJ</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="/index">Sync</a></li>
+                        <li class="active"><a href="#">Radio</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                        <li><select onchange="location = this.options[this.selectedIndex].value;">
+                              <option value="/player">Columbia Top 40</option>
+                              <option value="/player?station=underground">Columbia Underground</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+         </nav>
+<br>
+<div style="margin-left: 50px;">
 <img src="{{track.art}}" alt="Album Art" height="300" width="300" style="border:1px solid black;box-shadow:3px 3px 1px">
+<font color="white">
+ <h2 id="song">{{track.name}}</h2>
+ <h4 id="artist">{{track.artist}} </h4>
+ </div>
 <div id="audioWrapper"></div>
 <div style="position:relative;width:267px;height:0px;overflow:hidden;">
   <div id="player" style="position:absolute;top:-276px;left:-5px">
@@ -21,6 +47,11 @@
 <script src="http://www.youtube.com/player_api"></script>
 
 <script>
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+station = getURLParameter('station')? "?station=" + getURLParameter('station'):"";
+
 var url = "{{track.url}}"
      function onYouTubePlayerAPIReady() {
 
@@ -44,9 +75,11 @@ var url = "{{track.url}}"
             // when video ends
                 function onPlayerStateChange(event) {
                 if (event.data == YT.PlayerState.ENDED){
-                    $.getJSON("http://localhost:8002/top_40", function(data) {
+                    $.getJSON("http://localhost:8002/track" + station, function(data) {
                         console.log(data.url);
                         player.loadVideoById(data.url);
+                        document.getElementById("song").innerHTML = data.name;
+                        document.getElementById("artist").innerHTML = data.artist
                         //$("iframe").attr("src","http://youtube.com/watch?v=" + data.url);
 
                   });
