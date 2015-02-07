@@ -10,7 +10,9 @@ def youtubeVidSearch(artist, songName):
     content = json.loads(res.content.decode('utf-8'))
     videoUrl = 'https://www.youtube.com/watch?v='
     videoUrl += content['items'][0]['id']['videoId']
-    return videoUrl
+    #print(content)
+    artUrl = content['items'][0]['snippet']['thumbnails']['high']['url']
+    print(artUrl)
+    return [videoUrl, artUrl]
 
 y = youtubeVidSearch('Bruno Mars', 'Uptown Funk')
-print(y)
