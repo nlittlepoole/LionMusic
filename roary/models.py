@@ -8,6 +8,7 @@ class User(models.Model):
     dorm = models.CharField(max_length=120)
     google_music_time =models.CharField(max_length=120)
     soundcloud_music_time =models.CharField(max_length=120)
+    spotify_music_time =models.CharField(max_length=120)
 
 
     def __str__(self):
