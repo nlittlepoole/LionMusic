@@ -1,6 +1,3 @@
-<<<<<<< HEAD
 .idea
-=======
 *.pyc
 db.sqlite3
->>>>>>> FETCH_HEAD
