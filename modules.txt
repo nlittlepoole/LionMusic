@@ -1,3 +1,4 @@
+youtube-dl
 python-nvd3
 pxssh
 soundcloud

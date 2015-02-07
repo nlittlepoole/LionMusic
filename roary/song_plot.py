@@ -1,5 +1,4 @@
 from nvd3 import scatterChart
-import random
 
 def make_plot(xdata, ydata):
     output_file = open('../templates/roary/scatterChart.html', 'w')
